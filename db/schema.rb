@@ -50,6 +50,17 @@ ActiveRecord::Schema.define(version: 20160908003332) do
     t.index ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type", using: :btree
   end
 
+  create_table "invites", force: :cascade do |t|
+    t.string   "code"
+    t.string   "accepted_token"
+    t.datetime "accepted_at"
+    t.string   "email"
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
+    t.index ["accepted_token"], name: "index_invites_on_accepted_token", using: :btree
+    t.index ["code"], name: "index_invites_on_code", using: :btree
+  end
+
   create_table "news_distributions", force: :cascade do |t|
     t.string   "distribution_type"
     t.integer  "distribution_id"

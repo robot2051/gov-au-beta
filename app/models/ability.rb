@@ -24,6 +24,8 @@ class Ability
       # TODO: Should all logged in users be able to view editorial pages?
       can :view, :editorial_page
 
+      can :create, Invite
+
       can :manage, Node do |node|
         user.has_cached_role?(:author, node.section) &&
             node.section.cms_type == Section::COLLABORATE_CMS

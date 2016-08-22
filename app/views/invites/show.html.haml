@@ -1,0 +1,14 @@
+
+- if @invite.accepted?
+  %p
+    This code has already been accepted.
+
+- else
+  %p
+    About to accept beta invite to GOV.AU.
+  %p
+    This invite can only be accepted once, and your access will expire in one month.
+
+  = simple_form_for @invite, :action => 'update', :url => invite_path(@invite.code) do |form|
+    = form.hidden_field :code
+    = form.submit 'Accept invite'

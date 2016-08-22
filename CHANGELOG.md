@@ -7,6 +7,7 @@ This file is influenced by http://keepachangelog.com/.
 - Added ability to link to another page by id
 - Added EDITOR.md as a central location for documenting the editor
 - News lists can be filtered by ministers and departments
+- Toggle to require all visitors to have an invite
 
 ### Changed
 - Updated ui-kit to v1.8.0

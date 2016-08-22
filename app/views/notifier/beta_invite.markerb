@@ -1,0 +1,11 @@
+Hi,
+
+You have been invited to visit the GOV.AU Beta.
+
+Please click the following to accept the invitation:
+
+<<%= @url.html_safe %>>
+
+Thank you
+
+The GOV.AU Team
