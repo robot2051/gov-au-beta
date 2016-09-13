@@ -66,6 +66,7 @@ Rails.application.routes.draw do
     resources :departments
     resources :feedbacks
     resources :general_contents
+    resources :invites
     resources :ministers
     resources :news_articles
     resources :nodes
